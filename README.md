@@ -30,35 +30,15 @@ Command Prompt: <code> net users</code>
 <p> Using this command we can retrieve all properties relating to this account</p>
 <img src="https://imgur.com/PFM3cwB.png" height="80%" width="80%" alt="Project Overview Image">
 
+<h3> Identify Running Services on the system</h3>
+<p> Powershell: <code> Get-Service | Where Status -eq "Running" | Out-GridView</code></p>
+<img src="https://imgur.com/OE9u9av.png" height="80%" width="80%" alt="Project Overview Image">
 
-<br/>
-<br/>
-<h3> Identify operating system & Hostname</h3>
-Data Artifacts > Operating System Information
-<br/>
-<br/>
-<img src="https://imgur.com/xHuOUMm.png" height="80%" width="80%" alt="Project Overview Image">
-<h3> Results:</h3>
-<oL> 
-<li> Operating System: Windows 8 </li> 
-<li> Hostname: WIN-BK3J6TFMHLL </li>
-</oL>
-<br/>
-<h3>Identify file that was downloaded at 2013-12-18 03:02:50 & URL</h3>
-Data Artifacts > Web Downloads
-<br/>
-<br/>
-<img src="https://imgur.com/JHKz4Wn.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
-<h3>Identify the path of "Pier.jpg"</h3>
-Data Artifacts > Recent Documents
-<br/>
-<br/>
-<img src="https://imgur.com/1wFAOLU.png" height="80%" width="80%">
-<h3> Identify File size of "lib" directory</h3>
-Program Files > GIMP 2 > Click on largest partition
-<img src="https://imgur.com/gq22YpL.png" height="80%" width="80%">
-<h3> Investigate when was Administrator account last accessed </h3>
-Navigate > OS Accounts
-<br/>
-<img src="https://imgur.com/9gCLCyy.png" height="80%" width="80%" alt="Drive Input Selection">
+<h3> Identify Scheduled Services on the system</h3>
+<p> Powershell: <code> Get-ScheduledTask | Where State -eq "Ready"</code></p>
+<img src="https://imgur.com/xmPNFl7.png" height="80%" width="80%" alt="FTK Imager Memory Capture">
 
+<h3> Investigate Scheduled Task Property</h3>
+<p> Powershell: <code> Get-ScheduledTask -TaskName 'ActualtaskName' | Select * </code></p>
+<p> Reference triggers property </p>
+<img src="https://imgur.com/nWmSgCR.png" height="80%" width="80%">
